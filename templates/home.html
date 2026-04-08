@@ -1,0 +1,50 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Money Laundary Detector</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h2>
+            <legend>Anti Money Laundering Detection</legend>
+        </h2>
+        <div class="form-group">
+            <label for="from_bank">Bank where transaction originates:</label>
+            <input type="text" id="from_bank" name="from_bank" placeholder="Enter Numeric code (int)">
+        </div>
+        <div class="form-group">
+            <label for="account"> Code for account where transaction originates:</label>
+            <input type="text" id="account" name="account" placeholder="Enter code (str)">
+        </div>
+        <div class="form-group">
+            <label for="to_bank">Bank where transaction ends:</label>
+            <input type="text" id="to_bank" name="to_bank" placeholder="Enter Numeric code (int)">
+        </div>
+        <div class="form-group">
+            <label for="account_1"> Code for account where transaction ends:</label>
+            <input type="text" id="account_1" name="account_1" placeholder="Enter code (str)">
+        </div>
+        <div class="form-group">
+            <label for="amount_received"> Monetary amount received:</label>
+            <input type="text" id="amount_received" name="amount_received" placeholder="Enter the amount (float)">
+        </div>
+        <div class="form-group">
+            <label for="receiving_currency"> Currency such as dollars, euros etc.:</label>
+            <input type="text" id="receiving_currency" name="receiving_currency" placeholder="Enter currency (str)">
+        </div>
+        <div class="form-group">
+            <label for="payment_currency"> Currency such as dollars, euros etc.:</label>
+            <input type="text" id="payment_currency" name="payment_currency" placeholder="Enter currency (str)">
+        </div>
+        <div class="form-group">
+            <label for="payment_format"> How transaction was conducted:</label>
+            <input type="text" id="payment_format" name="payment_format" placeholder="Enter transaction type (str)">
+        </div>
+        <div style="clear:both;"></div>
+            <input class="btn btn-primary" type="submit" value="Predict whether the transactions is Fraud or not" required />
+    </form>
+    <h2>
+       The prediction is {{results}}
+    </h2>
+   <body>
+</html>
+

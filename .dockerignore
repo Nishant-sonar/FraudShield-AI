@@ -1,0 +1,43 @@
+# Git files
+.git
+.gitignore
+
+# Python cache
+__pycache__
+*.py[cod]
+*$py.class
+.pytest_cache
+*.egg-info
+dist
+build
+
+# Virtual environments
+.venv
+venv
+env
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+.env
+.env.local
+
+# Project specific
+.streamlit/secrets.toml
+mlruns/
+.mlflow/
+logs/
+archive/
+notebook/
+presentation/
+flowchart/
+
+# Temporary files
+*.log
+*.tmp
+*.cache
