@@ -5,6 +5,7 @@ Handles connections, CRUD operations, and queries with graceful error handling.
 """
 
 import sys
+import os
 from typing import List, Dict, Optional
 from datetime import datetime
 
@@ -24,8 +25,8 @@ class MongoDBHandler:
     _collection = None
     _is_connected = False
     
-    # Default configuration
-    MONGO_URI = "mongodb://localhost:27017/"
+    # Default configuration - Use environment variable for cloud, fallback to local
+    MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
     DB_NAME = "fraud_db"
     COLLECTION_NAME = "transactions"
     

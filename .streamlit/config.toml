@@ -1,0 +1,22 @@
+[theme]
+primaryColor = "#FF6B35"
+backgroundColor = "#1a1a1a"
+secondaryBackgroundColor = "#262730"
+textColor = "#FFFFFF"
+font = "sans serif"
+
+[client]
+showErrorDetails = true
+maxMessageSize = 200
+
+[logger]
+level = "info"
+
+[server]
+port = 8501
+headless = true
+runOnSave = true
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
